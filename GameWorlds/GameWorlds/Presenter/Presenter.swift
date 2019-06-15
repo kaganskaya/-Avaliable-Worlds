@@ -17,8 +17,8 @@ class Presenter {
     
     private var disposeBag = DisposeBag()
     
-    let login:String = " "
-    let password:String = " "
+    var login:String = " "
+    var password:String = " "
     
     func getWorlds(){
         
