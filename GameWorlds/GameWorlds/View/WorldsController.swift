@@ -63,7 +63,7 @@ extension WorldsController: UITableViewDelegate, UITableViewDataSource, WorldsVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "worldCell",for: indexPath) as? WorldsTableViewCell
 
-        cell?.worldLabel.text = data[indexPath.row].language
+        cell?.worldLabel.text = data[indexPath.row].name
         
         return cell!
         
