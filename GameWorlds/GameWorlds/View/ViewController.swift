@@ -8,24 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
 
     @IBOutlet weak var pass: UITextField!
     @IBOutlet weak var login: UITextField!
     
-    weak var mainView:WorldsView?
+    weak var worldsView:WorldsView?
+    
+    @IBAction func loginB(_ sender: Any) {
+        
+        
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "worlds") as? WorldsController else { return }
+        
+        detailVC.password = self.pass.text!
+        detailVC.login = self.login.text!
+        
+        self.showDetailViewController(detailVC, sender: self)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    @IBAction func loginB(_ sender: Any) {
-        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detail") as? WorldsController else { return }
-        
-
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        pass.resignFirstResponder()
+        login.resignFirstResponder()
     }
+    
     
 }
 

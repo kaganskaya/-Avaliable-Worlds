@@ -10,6 +10,11 @@ import UIKit
 
 class WorldsController: UIViewController {
 
+    
+    var login:String = ""
+    var password:String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
