@@ -13,8 +13,8 @@ class WorldsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let presenter = Presenter()
-    var login:String = ""
-    var password:String = ""
+    var login:String = UserDefaults.standard.getlogin()
+    var password:String = UserDefaults.standard.getPass()
     var data:[Worlds] = []
     
     
@@ -44,6 +44,14 @@ extension WorldsController: UITableViewDelegate, UITableViewDataSource, WorldsVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "User:" + self.login
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
     

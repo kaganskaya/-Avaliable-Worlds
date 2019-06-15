@@ -49,9 +49,16 @@ extension UserDefaults{
     
     enum UserDefaultsParams : String {
         case isLoggedIn
-        case username
+        case login
+        case password
     }
     
+    func setParams(login:String,password:String){
+        
+        set(login, forKey: UserDefaultsParams.login.rawValue)
+        set(password, forKey: UserDefaultsParams.password.rawValue)
+
+    }
     func setLoggedIn(value: Bool) {
         set(value, forKey: UserDefaultsParams.isLoggedIn.rawValue)
     }
@@ -60,11 +67,11 @@ extension UserDefaults{
         return bool(forKey: UserDefaultsParams.isLoggedIn.rawValue)
     }
     
-    func setUserNamevalue(value: String){
-        set(value, forKey: UserDefaultsParams.username.rawValue)
-    }
     
-    func getUserName() -> Int{
-        return integer(forKey: UserDefaultsParams.username.rawValue)
+    func getlogin() -> String{
+        return string(forKey: UserDefaultsParams.login.rawValue)!
+    }
+    func getPass() -> String{
+        return string(forKey: UserDefaultsParams.password.rawValue)!
     }
 }

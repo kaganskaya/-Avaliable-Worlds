@@ -16,9 +16,7 @@ class ViewController: UIViewController  {
     weak var worldsView:WorldsView?
     
     @IBAction func loginB(_ sender: Any) {
-        
-        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "worlds") as? WorldsController else { return }
-        
+                
         if (self.pass.text?.isEmpty)!  || (self.login.text?.isEmpty)!{
             
             let alert = UIAlertController(title: "Error", message: "Please fill in all login fields", preferredStyle: UIAlertController.Style.alert)
@@ -31,10 +29,9 @@ class ViewController: UIViewController  {
             
             UserDefaults.standard.setLoggedIn(value: true)
             
-                detailVC.password = self.pass.text!
-                detailVC.login = self.login.text!
+            UserDefaults.standard.setParams(login: self.login.text!, password: self.pass.text!)
             
-            self.showDetailViewController(detailVC, sender: self)
+            router.show()
         }
     }
     
