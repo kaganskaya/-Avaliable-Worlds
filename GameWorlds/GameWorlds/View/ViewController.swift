@@ -17,14 +17,25 @@ class ViewController: UIViewController  {
     
     @IBAction func loginB(_ sender: Any) {
         
-        
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "worlds") as? WorldsController else { return }
         
-        detailVC.password = self.pass.text!
-        detailVC.login = self.login.text!
-        
-        self.showDetailViewController(detailVC, sender: self)
-        
+        if (self.pass.text?.isEmpty)!  || (self.login.text?.isEmpty)!{
+            
+            let alert = UIAlertController(title: "Error", message: "Please fill in all login fields", preferredStyle: UIAlertController.Style.alert)
+            
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }else{
+            
+            UserDefaults.standard.setLoggedIn(value: true)
+            
+                detailVC.password = self.pass.text!
+                detailVC.login = self.login.text!
+            
+            self.showDetailViewController(detailVC, sender: self)
+        }
     }
     
     
@@ -34,6 +45,7 @@ class ViewController: UIViewController  {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
         pass.resignFirstResponder()
         login.resignFirstResponder()
     }

@@ -14,7 +14,7 @@ class Presenter {
     weak var view:WorldsView?
     
     let np = NetworkProvider()
-    
+
     private var disposeBag = DisposeBag()
     
     var login:String = " "
@@ -37,4 +37,5 @@ class Presenter {
         
     }
     
+
 }

@@ -17,25 +17,26 @@ class WorldsController: UIViewController {
     var password:String = ""
     var data:[Worlds] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.setupHeader(view: self.view, name: "Game Worlds")
-
+        
         self.presenter.view = self
+
         self.presenter.login = self.login
         self.presenter.password = self.password
         self.presenter.getWorlds()
-       
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    }
     
-
-   
+    }
 
 }
 extension WorldsController: UITableViewDelegate, UITableViewDataSource, WorldsView {
+   
    
     func showAwaliableWorlds(worlds: [Worlds]) {
         self.data = worlds

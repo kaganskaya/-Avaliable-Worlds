@@ -10,7 +10,6 @@ import Foundation
 
 protocol WorldsView:class {
    
-   
     func showAwaliableWorlds(worlds:[Worlds])
     
 }

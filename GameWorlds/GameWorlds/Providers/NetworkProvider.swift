@@ -25,8 +25,9 @@ class NetworkProvider {
     
     func getWorlds(login:String,password:String)->Observable<[Worlds]>{
         
+       
         let parameters =  ["login": login, "password": password, "deviceType": type, "deviceId": deviceId] as [String : Any]
-        
+
         return Observable<[Worlds]>.create { observer  in
     
             let request = Alamofire

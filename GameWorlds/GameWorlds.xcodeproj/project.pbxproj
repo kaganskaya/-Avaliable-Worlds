@@ -20,6 +20,7 @@
 		67D0181E22B40B28004EE0C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D0181C22B40B28004EE0C2 /* LaunchScreen.storyboard */; };
 		67D0182622B40B48004EE0C2 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0182522B40B47004EE0C2 /* NetworkProvider.swift */; };
 		67D8A9F722B4FFB700BFCFB4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8A9F622B4FFB700BFCFB4 /* Extensions.swift */; };
+		67D8A9FB22B517ED00BFCFB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8A9FA22B517ED00BFCFB4 /* Router.swift */; };
 		CB95ADF63617116A60F281A5 /* Pods_GameWorlds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842634DE3D28A51A4A1D36D6 /* Pods_GameWorlds.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		67D0181F22B40B28004EE0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67D0182522B40B47004EE0C2 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		67D8A9F622B4FFB700BFCFB4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		67D8A9FA22B517ED00BFCFB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		842634DE3D28A51A4A1D36D6 /* Pods_GameWorlds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameWorlds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98404C2A128186253E6374B4 /* Pods-GameWorlds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameWorlds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameWorlds/Pods-GameWorlds.debug.xcconfig"; sourceTree = "<group>"; };
 		E28075E016BF3A68F8C8444B /* Pods-GameWorlds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameWorlds.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameWorlds/Pods-GameWorlds.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		67D0180F22B40B25004EE0C2 /* GameWorlds */ = {
 			isa = PBXGroup;
 			children = (
+				67D8A9FC22B5203500BFCFB4 /* Router */,
 				67D8A9F522B4FF9D00BFCFB4 /* Extension */,
 				6717168622B4E1C300DBF2E4 /* View */,
 				6717168322B4E0BB00DBF2E4 /* Protocols */,
@@ -149,6 +152,14 @@
 				67D8A9F622B4FFB700BFCFB4 /* Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		67D8A9FC22B5203500BFCFB4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				67D8A9FA22B517ED00BFCFB4 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		95B3487C475CD64AC9FB0510 /* Pods */ = {
@@ -286,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D8A9FB22B517ED00BFCFB4 /* Router.swift in Sources */,
 				6717168822B4EBC300DBF2E4 /* WorldsController.swift in Sources */,
 				6717168122B4E08600DBF2E4 /* Presenter.swift in Sources */,
 				67D0181322B40B25004EE0C2 /* ViewController.swift in Sources */,
